@@ -25,7 +25,6 @@ time.sleep(0.5)
 ketik(f"{C}[*] Server Status... {G}HALF ONLINE{W}")
 time.sleep(1)
 
-# --- SISTEM LOGIN DIPINDAH KE AWAL ---
 clear()
 print(f"{R}==========================={W}")
 print(f"{R}       LOGIN USER          {W}")
@@ -38,16 +37,16 @@ time.sleep(1)
 print(f"{G}[+] Sesi Dibuat! Memuat antarmuka...{W}")
 time.sleep(1)
 
-# --- MENU UTAMA ---
 clear()
-print(f"{R}======================================================{W}")
-print(f"{R}      ███╗   ██╗ █████╗ ██╗  ██╗██╗   ██╗███╗   ██╗   {W}")
-print(f"{R}      ████╗  ██║██╔══██╗██║ ██╔╝██║   ██║████╗  ██║   {W}")
-print(f"{R}      ██╔██╗ ██║███████║█████╔╝ ██║   ██║██╔██╗ ██║   {W}")
-print(f"{R}      ██║╚██╗██║██╔══██║██╔═██╗ ██║   ██║██║╚██╗██║   {W}")
-print(f"{R}      ██║ ╚████║██║  ██║██║  ██╗╚██████╔╝██║ ╚████║   {W}")
-print(f"{R}      ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   {W}")
-print(f"{R}======================================================{W}")
+# MENGGUNAKAN KUTIP TIGA AGAR AMAN DARI ERROR COPY-PASTE
+print(f"""{R}======================================================
+      ███╗   ██╗ █████╗ ██╗  ██╗██╗   ██╗███╗   ██╗   
+      ████╗  ██║██╔══██╗██║ ██╔╝██║   ██║████╗  ██║   
+      ██╔██╗ ██║███████║█████╔╝ ██║   ██║██╔██╗ ██║   
+      ██║╚██╗██║██╔══██║██╔═██╗ ██║   ██║██║╚██╗██║   
+      ██║ ╚████║██║  ██║██║  ██╗╚██████╔╝██║ ╚████║   
+      ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   
+======================================================{W}""")
 print(f"{C}      Logged in as: {G}{user_input}{W}")
 print(f"{R}======================================================{W}")
 print(f"{G}1. Inject Auto Headshot 40%{W}")
@@ -71,7 +70,6 @@ if pilih not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
     print(f"{R}[!] Pilihan tidak valid.{W}")
     sys.exit()
 
-# Daftar Lengkap Kredensial
 kredensial = {
     "1": {"user": "VIP40", "pw": "HS40"},
     "2": {"user": "VIP50", "pw": "HS50"},
@@ -87,19 +85,15 @@ akses_diberikan = False
 ketik(f"\n{C}[*] Memverifikasi Hak Akses untuk Menu {pilih}...{W}", 0.05)
 time.sleep(1)
 
-# --- LOGIKA PENGECEKAN TINGKAT DEWA ---
 if pilih in kredensial:
-    # Cek apakah user dan pw dari awal COCOK dengan level menu yang dipilih
     if user_input == kredensial[pilih]["user"] and pw_input == kredensial[pilih]["pw"]:
         akses_diberikan = True
 elif pilih == "8":
-    # Jika pilih Bypass, cek apakah user dan pw adalah akun resmi (akun level berapapun bebas)
     for k, v in kredensial.items():
         if v["user"] == user_input and v["pw"] == pw_input:
             akses_diberikan = True
             break
 
-# Jika salah akun / salah level, TENDANG!
 if not akses_diberikan:
     print(f"{R}[!] AKSES DITOLAK:{W} Akun '{user_input}' tidak memiliki lisensi untuk level ini!")
     print(f"{R}[!] Program dihentikan otomatis untuk keamanan.{W}")
@@ -108,7 +102,6 @@ if not akses_diberikan:
 print(f"{G}[+] Hak Akses Diterima! Melanjutkan proses...{W}")
 time.sleep(1)
 
-# --- ANIMASI BYPASS ANTI-CHEAT ---
 print(f"\n{R}[!] INITIALIZING ANTI-CHEAT BYPASS PROTOCOL...{W}")
 time.sleep(1)
 print(f"{C}[*] Spoofing Device ID (IMEI/MAC Address)... {W}", end="", flush=True)
@@ -127,7 +120,6 @@ for i in range(20):
     time.sleep(0.1)
 print(f"{Y}] 100% SECURE{W}")
 time.sleep(1)
-# ---------------------------------
 
 ketik(f"\n{C}[*] Searching target process...{W}")
 time.sleep(1)
